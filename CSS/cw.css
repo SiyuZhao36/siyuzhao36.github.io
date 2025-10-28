@@ -1,0 +1,16 @@
+#heading1{
+    color:rgb(129, 187, 248);
+    background-color:aliceblue;
+}
+
+.text-pink{
+    color:rgb(254, 165, 180);
+}
+
+.text-background-lightpink{
+    background-color:rgb(255, 234, 238);
+}
+
+body{
+    background-image: url(../assets/sample.png);
+}
