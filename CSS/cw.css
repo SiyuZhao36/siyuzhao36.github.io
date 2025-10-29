@@ -13,4 +13,17 @@
 
 body{
     background-image: url(../assets/sample.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    color:bisque;
+}
+
+h1{
+    font-size: 2.8rem;
+}
+
+.text-para{
+    font-size: 1.3rem;
+    text-align: left;
 }
