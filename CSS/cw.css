@@ -16,14 +16,40 @@ body{
     background-repeat: no-repeat;
     background-position: right top;
     background-attachment: fixed;
-    color:bisque;
+    color:rgb(110, 72, 26);
+    font-family: "momo signature","Lucida Handwriting",cursive;
 }
 
 h1{
-    font-size: 2.8rem;
+    font-size: 3.8rem;
+    font-family: "Arial";
+    font-style: italic;
+    font-weight: 800;
+}
+
+a{
+    color:darkseagreen;
+}
+
+:root {
+    --priamry-red: #dc3545;
+    --just-red: rgb(84,8,8);
+}
+
+a:hover{
+    color:rgb(132, 110, 255);
+    background-color: rgba(209, 233, 255, 0.5);
+    padding: 20px 10px 20px 10px;
+    margin-left: 50px;
 }
 
 .text-para{
     font-size: 1.3rem;
     text-align: left;
+}
+
+@media (max-width:576px) {
+    body {
+        background-color: aliceblue;
+    }
 }
