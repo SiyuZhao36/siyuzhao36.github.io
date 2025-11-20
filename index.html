@@ -1,71 +1,301 @@
 <html>
     <head>
-        <title> My first website </title>
-        <link rel="stylesheet" href="css/mystyle.css">
+        <title> Siyu's Website </title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <h1> Hello <b><u>world</u></b></h1>
-        <h2>This is a sub-heading</h2>
-        <a href = "https://mcgill.ca" target="_self"> link to Mcgill website </a><br>
-        <img src="assets/sample.png" alt="Sample Image" width="500"><br>
-        <iframe src="assets/sample_file.pdf" title="Sample PDF" height="500" width="600"></iframe><br>
+        <a class="skip-link" href="#main">Skip to content</a>
 
-        <video controls>
-            <source src="https://pqina.nl/media/sample-mp4-file.mp4" type="video/mp4">
-        </video>
-        <hr>
+        <!-- Header / Navigation -->
+        <header class="site-header" role="banner">
+            <div class="container header-inner">
+                <a class="brand" href="#home">Siyu's Website</a>
+                <nav class="site-nav" aria-label="Primary">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#experience">Experience & Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-        <audio controls>
-            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
-        </audio>
-        <hr><br>
+        <main id="main">
+            <!-- Home -->
+            <section id="home" class="section hero" aria-label="Home">
+                <div class="container hero-grid">
+                    <div class="hero-text">
+                        <h1>Siyu Zhao</h1>
+                        <p class="lead">
+                            &nbsp;•&nbsp; Montréal, Canada
+                        </p>
+                        <p class="lead">
+                            &nbsp;•&nbsp;
+                            <a href="mailto:Jacquelinezjjx@hotmail.com">Jacquelinezjjx@hotmail.com</a>
+                        </p>
+                        <div class="cta-row">
+                            <a class="btn primary" href="#contact">Contact Me</a>
+                            <a class="btn ghost" href="#experience">View Experience</a>
+                        </div>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="/Users/zsy/Documents/GitHub/siyuzhao36.github.io/assets/me.jpg" alt="Portrait of Siyu Zhao" loading="lazy">
+                    </div>
+                </div>
+            </section>
 
-        <ul>
-            <li>Point 1</li>
-            <li>Point 2</li>
-            <li>Point 3</li>
-        </ul>
-        
-        <ol>
-            <li>Point 1</li>
-            <li>Point 2</li>
-            <li>Point 3</li>
-        </ol>
+            <!-- About -->
+            <section id="about" class="section" aria-label="About Me">
+                <div class="container two-col">
+                    <div>
+                        <h2>About Me</h2>
+                        <p>
+                            I'm a graduate student in Information Studies with a background in Statistics and Economics.
+                            I combine quantitative analysis with user-centered thinking to deliver clear insights,
+                            visualizations, and decision support for organizations.
+                        </p>
+                        <p>
+                            Area of Interests: Data Science, User Experience, AI
+                        </p>
+                    </div>
+                    <ul class="about-highlights">
+                        <li>📚 Statistics, Economics, Data Science</li>
+                        <li>🧠 Quantitative & Qualitative Research</li>
+                        <li>📈 Visualization & Storytelling</li>
+                        <li>🌐 Language: EN / CN / FR / ES</li>
+                    </ul>
+                </div>
+            </section>
 
-        <!-- this is a comment-->
-        <dl>
-            <dt>Title 1</dt>
-            <dd>description for Item 1</dd>
-            <dt>Title 2</dt>
-            <dd>description for Item 2</dd>
-            <dt>Title 3</dt>
-            <dd>description for Item 3</dd>
-        </dl>
+            <!-- Education -->
+            <section id="education" class="section alt" aria-label="Education">
+                <div class="container">
+                    <h2>Education</h2>
+                    <div class="timeline">
+                        <article class="timeline-item">
+                            <div class="timeline-dot" aria-hidden="true"></div>
+                            <div class="timeline-content">
+                                <h3>McGill University — Master of Information Studies</h3>
+                                <p class="meta">08/2024 – 05/2026 · Montréal, Canada</p>
+                                <p>Data Science & User Experience</p>
+                            </div>
+                        </article>
 
-        <p>&#129409</p>
+                        <article class="timeline-item">
+                            <div class="timeline-dot" aria-hidden="true"></div>
+                            <div class="timeline-content">
+                                <h3>McGill University — B.A. & B.Sc.</h3>
+                                <p class="meta">09/2020 – 05/2024 · Montréal, Canada</p>
+                                <p>Major Concentration in Statistics; Major Concentration in Economics</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
 
-        <table border="1">
-            <tr>
-                <th>Company</th>
-                <th>Contact</th>
-                <th>Country</th>
-            </tr>
-            <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-                <td>Germany</td>
-            </tr>
-            <tr>
-                <td>Centro comercial Moctezuma</td>
-                <td>Francisco Chang</td>
-                <td>Mexico</td>
-            </tr>
-        </table>
+            <!-- Experience & Projects -->
+            <section id="experience" class="section" aria-label="Experience & Projects">
+                <div class="container">
+                    <h2>Professional Experience</h2>
 
-        <form>
-            <input type="text" name="fname">
-        </form>
+                    <div class="card-grid">
+                        <!-- Jiaxing Research Institute -->
+                        <article class="card">
+                            <h3>Research Intern (Full-time)</h3>
+                            <p class="meta">Jiaxing Research Institute, Zhejiang University — Jiaxing, China · 07/2023 – 08/2023</p>
+                            <p><strong>Project 1 · Development Status of Individual & Commercial Businesses (2023 Q2)</strong></p>
+                            <ul class="tag-list">
+                                <li>Survey design & distribution; insights on goals & progress</li>
+                                <li>Python for data cleaning & automation</li>
+                                <li>Statistical modeling; accuracy optimization</li>
+                                <li>Q1–Q2 comparative analysis; visualization & reporting</li>
+                            </ul>
+                            <p><strong>Project 2 · Operational Performance of Privately-Owned Enterprises (2023 Q2)</strong></p>
+                            <ul class="tag-list">
+                                <li>Seminars/workshops with entrepreneurs & CEOs</li>
+                                <li>Data collection from official/industry sources; synthesis for the Centre</li>
+                                <li>Modeling, analysis, visualization; comprehensive reports</li>
+                            </ul>
+                            <p><strong>Project 3 · Digital Economy & Common Prosperity (Case Study)</strong></p>
+                            <ul class="tag-list">
+                                <li>On-site visits; supply-chain & management digitization insights</li>
+                                <li>Executive interviews; consolidated findings into data summary</li>
+                            </ul>
+                        </article>
 
+                        <!-- COSCO Shipping -->
+                        <article class="card">
+                            <h3>Revenue Management Intern (Full-time)</h3>
+                            <p class="meta">COSCO Shipping Lines Co., Ltd. — Shanghai, China · 06/2023 – 07/2023</p>
+                            <ul class="tag-list">
+                                <li>Capacity–profitability multi-dimensional analysis</li>
+                                <li>Top-10 global carriers benchmarking (10 years)</li>
+                                <li>Competitors’ freight/utilization tracking & quarterly deltas</li>
+                                <li>Route NO change analysis; CCFI quarterly means</li>
+                                <li>Python analytics; Excel visualizations; reporting</li>
+                                <li>Revenue forecasting support via competitor & market evaluation</li>
+                                <li>Price elasticity model & partner quotes benchmarking</li>
+                            </ul>
+                        </article>
 
+                        <!-- Volunteer -->
+                        <article class="card">
+                            <h3>Volunteer Experience — Team Leader</h3>
+                            <p class="meta">Yijia Commonweal Organization · 06/2020 – 08/2020</p>
+                            <ul class="tag-list">
+                                <li>Led 80+ volunteers; charity marathons & fundraising</li>
+                                <li>Media campaigns across posts/posters/ads</li>
+                                <li>Community interviews; online-shopping feasibility</li>
+                                <li>Proposal for local economic development</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills + Artwork Carousel -->
+            <section id="skills" class="section alt" aria-label="Skills & Artwork">
+                <div class="container">
+                    <h2>Skills & Interests</h2>
+                    <div class="skills-grid">
+                        <div>
+                            <h3>Technical Proficiencies</h3>
+                            <ul class="skill-columns">
+                                <li>Microsoft PowerPoint / Word / Excel</li>
+                                <li>MS Power BI</li>
+                                <li>Altair AI</li>
+                                <li>Python &amp; R</li>
+                            </ul>
+
+                            <h3>Professional Skills</h3>
+                            <ul class="skill-columns">
+                                <li>Data Mining / Analysis / Visualization</li>
+                                <li>Statistical Modelling</li>
+                                <li>Quantitative &amp; Qualitative Research</li>
+                                <li>Usability Analysis</li>
+                                <li>Business Analysis</li>
+                                <li>Competitive Benchmarking</li>
+                                <li>Information Retrieval</li>
+                                <li>Industry Analysis</li>
+                                <li>Project Management</li>
+                                <li>Marketing Strategy &amp; Planning</li>
+                            </ul>
+
+                            <h3>Qualitative Strengths</h3>
+                            <ul class="skill-columns">
+                                <li>Leadership</li>
+                                <li>Communication</li>
+                                <li>Collaboration</li>
+                                <li>Decision Making</li>
+                            </ul>
+
+                            <h3>Languages & Interests</h3>
+                            <ul class="skill-columns">
+                                <li>Mandarin &amp; English (Fluent)</li>
+                                <li>French &amp; Spanish (Novice)</li>
+                                <li>Fitness</li>
+                                <li>Painting</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="mt">Artwork Carousel</h3>
+                            <div class="carousel" role="region" aria-label="Artwork Carousel">
+                                <!-- Radios -->
+                                <input type="radio" name="slider" id="slide-1" checked aria-hidden="true">
+                                <input type="radio" name="slider" id="slide-2" aria-hidden="true">
+                                <input type="radio" name="slider" id="slide-3" aria-hidden="true">
+                                <!-- Slides -->
+                                <div class="slides">
+                                    <figure class="slide s1">
+                                        <img src="https://images.unsplash.com/photo-1504198266285-1659d6c47c58?q=80&w=1200&auto=format&fit=crop" alt="Artwork 1" loading="lazy">
+                                        <figcaption>Sunset — Oil on canvas</figcaption>
+                                    </figure>
+                                    <figure class="slide s2">
+                                        <img src="https://images.unsplash.com/photo-1496317899792-9d7dbcd928a1?q=80&w=1200&auto=format&fit=crop" alt="Artwork 2" loading="lazy">
+                                        <figcaption>City Rhythm — Watercolor</figcaption>
+                                    </figure>
+                                    <figure class="slide s3">
+                                        <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=1200&auto=format&fit=crop" alt="Artwork 3" loading="lazy">
+                                        <figcaption>Winter Lights — Acrylic</figcaption>
+                                    </figure>
+                                </div>
+                                <!-- Dots -->
+                                <div class="controls" aria-hidden="true">
+                                    <label for="slide-1" class="dot"></label>
+                                    <label for="slide-2" class="dot"></label>
+                                    <label for="slide-3" class="dot"></label>
+                                </div>
+                                <!-- Prev/Next (optional) -->
+                                <div class="arrows" aria-hidden="true">
+                                    <label class="prev" for="slide-3">‹</label>
+                                    <label class="next" for="slide-2">›</label>
+                                    <label class="prev" for="slide-1">‹</label>
+                                    <label class="next" for="slide-3">›</label>
+                                    <label class="prev" for="slide-2">‹</label>
+                                    <label class="next" for="slide-1">›</label>
+                                </div>
+                            </div>
+                            <p class="carousel-note">Replace image URLs with your own later.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="section" aria-label="Contact Me">
+                <div class="container">
+                    <h2>Contact Me</h2>
+                    <div class="contact-grid">
+                        <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
+                            <label>
+                                <span>Name</span>
+                                <input type="text" name="name" required>
+                            </label>
+                            <label>
+                                <span>Email</span>
+                                <input type="email" name="email" required>
+                            </label>
+                            <label>
+                                <span>Message</span>
+                                <textarea name="message" rows="5" required></textarea>
+                            </label>
+                            <button class="btn primary" type="submit">Send</button>
+                        </form>
+
+                        <div class="contact-info">
+                            <ul class="contact-list">
+                                <li><strong>Email:</strong> <a href="mailto:Jacquelinezjjx@hotmail.com">Jacquelinezjjx@hotmail.com</a></li>
+                                <li><strong>Phone:</strong> 438-941-5928</li>
+                                <li><strong>Location:</strong> Montréal, Canada</li>
+                                <li><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener">Add your link</a></li>
+                                <li><strong>GitHub:</strong> <a href="#" target="_blank" rel="noopener">Add your link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer" role="contentinfo">
+            <div class="container">
+                <p>© <span id="year"></span> Siyu Zhao. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <script>
+        window.addEventListener('load', () => {
+            window.scrollTo(0, 0);
+        });
+        </script>
     </body>
 </html>
