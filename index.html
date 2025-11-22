@@ -168,93 +168,140 @@
             </section>
 
             <!-- Skills + Artwork Carousel -->
-            <section id="skills" class="section alt" aria-label="Skills & Artwork">
-                <div class="container">
-                    <h2>Skills & Interests</h2>
-                    <div class="skills-grid">
-                        <div>
-                            <h3>Technical Proficiencies</h3>
-                            <ul class="skill-columns">
-                                <li>Microsoft PowerPoint / Word / Excel</li>
-                                <li>MS Power BI</li>
-                                <li>Altair AI</li>
-                                <li>Python &amp; R</li>
-                            </ul>
+            <section id="skills" class="section alt" aria-label="Skills & Interests">
+            <div class="container">
+                <h2>Skills &amp; Interests</h2>
 
-                            <h3>Professional Skills</h3>
-                            <ul class="skill-columns">
-                                <li>Data Mining / Analysis / Visualization</li>
-                                <li>Statistical Modelling</li>
-                                <li>Quantitative &amp; Qualitative Research</li>
-                                <li>Usability Analysis</li>
-                                <li>Business Analysis</li>
-                                <li>Competitive Benchmarking</li>
-                                <li>Information Retrieval</li>
-                                <li>Industry Analysis</li>
-                                <li>Project Management</li>
-                                <li>Marketing Strategy &amp; Planning</li>
-                            </ul>
-
-                            <h3>Qualitative Strengths</h3>
-                            <ul class="skill-columns">
-                                <li>Leadership</li>
-                                <li>Communication</li>
-                                <li>Collaboration</li>
-                                <li>Decision Making</li>
-                            </ul>
-
-                            <h3>Languages & Interests</h3>
-                            <ul class="skill-columns">
-                                <li>Mandarin &amp; English (Fluent)</li>
-                                <li>French &amp; Spanish (Novice)</li>
-                                <li>Fitness</li>
-                                <li>Painting</li>
-                            </ul>
+                <div class="skills-grid">
+                <!-- LEFT COLUMN -->
+                <div>
+                    <!-- Technical -->
+                    <h3>Technical Proficiencies</h3>
+                    <ul class="meter-list">
+                    <li>
+                        <div class="row">
+                        <span>Python</span><span class="val">75%</span>
                         </div>
-
-                        <div>
-                            <h3 class="mt">Artwork Carousel</h3>
-                            <div class="carousel" role="region" aria-label="Artwork Carousel">
-                                <!-- Radios -->
-                                <input type="radio" name="slider" id="slide-1" checked aria-hidden="true">
-                                <input type="radio" name="slider" id="slide-2" aria-hidden="true">
-                                <input type="radio" name="slider" id="slide-3" aria-hidden="true">
-                                <!-- Slides -->
-                                <div class="slides">
-                                    <figure class="slide s1">
-                                        <img src="https://images.unsplash.com/photo-1504198266285-1659d6c47c58?q=80&w=1200&auto=format&fit=crop" alt="Artwork 1" loading="lazy">
-                                        <figcaption>Sunset — Oil on canvas</figcaption>
-                                    </figure>
-                                    <figure class="slide s2">
-                                        <img src="https://images.unsplash.com/photo-1496317899792-9d7dbcd928a1?q=80&w=1200&auto=format&fit=crop" alt="Artwork 2" loading="lazy">
-                                        <figcaption>City Rhythm — Watercolor</figcaption>
-                                    </figure>
-                                    <figure class="slide s3">
-                                        <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=1200&auto=format&fit=crop" alt="Artwork 3" loading="lazy">
-                                        <figcaption>Winter Lights — Acrylic</figcaption>
-                                    </figure>
-                                </div>
-                                <!-- Dots -->
-                                <div class="controls" aria-hidden="true">
-                                    <label for="slide-1" class="dot"></label>
-                                    <label for="slide-2" class="dot"></label>
-                                    <label for="slide-3" class="dot"></label>
-                                </div>
-                                <!-- Prev/Next (optional) -->
-                                <div class="arrows" aria-hidden="true">
-                                    <label class="prev" for="slide-3">‹</label>
-                                    <label class="next" for="slide-2">›</label>
-                                    <label class="prev" for="slide-1">‹</label>
-                                    <label class="next" for="slide-3">›</label>
-                                    <label class="prev" for="slide-2">‹</label>
-                                    <label class="next" for="slide-1">›</label>
-                                </div>
-                            </div>
-                            <p class="carousel-note">Replace image URLs with your own later.</p>
+                        <div class="meter" aria-label="Python"><span class="bar" style="--val:75"></span></div>
+                    </li>
+                    <li>
+                        <div class="row">
+                        <span>R</span><span class="val">60%</span>
                         </div>
+                        <div class="meter" aria-label="R"><span class="bar" style="--val:60"></span></div>
+                    </li>
+                    <li>
+                        <div class="row">
+                        <span>HTML/CSS</span><span class="val">70%</span>
+                        </div>
+                        <div class="meter" aria-label="HTML/CSS"><span class="bar" style="--val:70"></span></div>
+                    </li>
+                    <li>
+                        <div class="row">
+                        <span>Altair AI</span><span class="val">80%</span>
+                        </div>
+                        <div class="meter" aria-label="Altair AI"><span class="bar" style="--val:80"></span></div>
+                    </li>
+                    <li>
+                        <div class="row">
+                        <span>Microsoft Office Suite</span><span class="val">55%</span>
+                        </div>
+                        <div class="meter" aria-label="Microsoft"><span class="bar" style="--val:55"></span></div>
+                    </li>
+                    </ul>
+
+                    <!-- Qualitative Strengths -->
+                    <h3>Qualitative Strengths</h3>
+                    <ul class="pill-grid squares">
+                    <li>Leadership</li>
+                    <li>Communication</li>
+                    <li>Collaboration</li>
+                    </ul>
+
+                    <!-- Languages -->
+                    <h3>Languages</h3>
+                    <ul class="meter-list">
+                    <li>
+                        <div class="row">
+                        <span>Mandarin</span><span class="level">Native</span>
+                        </div>
+                        <div class="meter" aria-label="Mandarin"><span class="bar" style="--val:100"></span></div>
+                    </li>
+                    <li>
+                        <div class="row">
+                        <span>English</span><span class="level">Advanced</span>
+                        </div>
+                        <div class="meter" aria-label="English"><span class="bar" style="--val:75"></span></div>
+                    </li>
+                    <li>
+                        <div class="row">
+                        <span>French</span><span class="level">Intermediate</span>
+                        </div>
+                        <div class="meter" aria-label="French"><span class="bar" style="--val:50"></span></div>
+                    </li>
+                    <li>
+                        <div class="row">
+                        <span>Spanish</span><span class="level">Beginner</span>
+                        </div>
+                        <div class="meter" aria-label="Spanish"><span class="bar" style="--val:25"></span></div>
+                    </li>
+                    </ul>
+                </div>
+
+                <!-- RIGHT COLUMN -->
+                <div>
+                    <h3>Interests</h3>
+                    <ul class="pill-grid squares">
+                    <li>Fitness</li>
+                    <li>Flower Arrangement</li>
+                    <li>Painting</li>
+                    </ul>
+
+                    <h3 class="mt">Painting Carousel</h3>
+                    <div class="css-carousel" aria-label="Painting Carousel">
+                    <!-- radios：控制当前页 -->
+                    <input type="radio" name="paint" id="paint1" checked>
+                    <input type="radio" name="paint" id="paint2">
+                    <input type="radio" name="paint" id="paint3">
+
+                    <!-- slides -->
+                    <div class="track">
+                        <figure class="slide s1">
+                        <img src="/assets/painting-1.jpg" alt="">
+                        </figure>
+                        <figure class="slide s2">
+                        <img src="/assets/painting-2.jpg" alt="">
+                        </figure>
+                        <figure class="slide s3">
+                        <img src="/assets/painting-3.jpg" alt="">
+                        </figure>
+                    </div>
+
+                    <!-- arrows（用 label 作为按钮） -->
+                    <div class="nav-arrows" aria-hidden="true">
+                        <!-- 当第1张选中时：显示 上=3 下=2 -->
+                        <label class="prev" for="paint3">❮</label>
+                        <label class="next" for="paint2">❯</label>
+                        <!-- 当第2张选中时：显示 上=1 下=3 -->
+                        <label class="prev" for="paint1">❮</label>
+                        <label class="next" for="paint3">❯</label>
+                        <!-- 当第3张选中时：显示 上=2 下=1 -->
+                        <label class="prev" for="paint2">❮</label>
+                        <label class="next" for="paint1">❯</label>
+                    </div>
+
+                    <!-- dots -->
+                    <div class="dots" aria-hidden="true">
+                        <label for="paint1" class="dot"></label>
+                        <label for="paint2" class="dot"></label>
+                        <label for="paint3" class="dot"></label>
                     </div>
                 </div>
+
+                </div>
+            </div>
             </section>
+
 
             <!-- Contact -->
             <section id="contact" class="section" aria-label="Contact Me">

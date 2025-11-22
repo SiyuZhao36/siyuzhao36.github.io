@@ -45,7 +45,7 @@ img{ max-width:100%; display:block; }
 .skip-link{ position:absolute; left:-9999px; }
 .skip-link:focus{ left:12px; top:12px; background:var(--accent-3); color:#fff; padding:8px 10px; border-radius:8px; }
 
-/* Hero */
+/* Home */
 .hero{ padding-top:110px;}
 .hero-grid{ display:grid; grid-template-columns:1.15fr .85fr; gap:40px; align-items:center; }
 .hero-text h1:first-of-type {
@@ -78,7 +78,7 @@ img{ max-width:100%; display:block; }
   background: var(--panel-2);
 }
 
-/* Layout blocks */
+/* About */
 .two-col{ display:grid; grid-template-columns:1.2fr .8fr; gap:36px;}
 h1, h2, h3{ color:var(--accent-2); }
 .about-highlights{
@@ -93,7 +93,7 @@ h1, h2, h3{ color:var(--accent-2); }
   margin-bottom: 10px;
 }
 
-/* Timeline */
+/* Education */
 .timeline{ position:relative; margin-top:26px; }
 .timeline::before{
   content:""; position:absolute; left:13px; top:0; bottom:0; width:2px;
@@ -168,36 +168,173 @@ h1, h2, h3{ color:var(--accent-2); }
   margin-bottom: 6px;
 }
 
-/* Skills + Carousel */
+/* Skills + Artwork Carousel */
 .skills-grid{ display:grid; grid-template-columns:1fr 1fr; gap:26px; align-items:start; }
 .skill-columns{ columns:2; gap:18px; list-style:disc; padding-left:18px; }
-.mt{ margin-top:14px; }
 
-.carousel{
-  position:relative; background:var(--panel); border:1px solid var(--border); border-radius:18px; padding:16px; overflow:hidden; box-shadow: var(--shadow);
+.meter-list{
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 28px;
+  display: grid;
+  gap: 14px;
 }
-.carousel input{ position:absolute; opacity:0; }
-.slides{ display:grid; grid-template-columns:100%; }
-.slide{ grid-area:1/1; opacity:0; transform:scale(.985); transition:opacity .45s ease, transform .45s ease; text-align:center; }
-.slide img{ max-height:320px; width:auto; margin:0 auto; border-radius:14px; border:1px solid var(--border); }
-.slide figcaption{ color:var(--muted); margin-top:10px; }
-#slide-1:checked ~ .slides .s1{ opacity:1; transform:scale(1); }
-#slide-2:checked ~ .slides .s2{ opacity:1; transform:scale(1); }
-#slide-3:checked ~ .slides .s3{ opacity:1; transform:scale(1); }
 
-.controls{ display:flex; justify-content:center; gap:8px; margin-top:12px; }
-.controls .dot{
-  width:10px; height:10px; border-radius:50%; background:#d9dded; border:1px solid var(--border); cursor:pointer;
+.meter-list .row{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+  color: var(--accent-2);
+  font-weight: 600;
 }
-#slide-1:checked ~ .controls label:nth-child(1),
-#slide-2:checked ~ .controls label:nth-child(2),
-#slide-3:checked ~ .controls label:nth-child(3){ background:var(--accent-3); border-color:transparent; }
 
-.arrows{ position:absolute; inset:0; display:flex; align-items:center; justify-content:space-between; padding:0 10px; pointer-events:none; }
-.arrows label{
-  pointer-events:auto; font-size:32px; line-height:1; padding:6px 10px; border-radius:10px;
-  background:rgba(255,255,255,.75); border:1px solid var(--border); cursor:pointer; user-select:none;
+.meter-list .row .val,
+.meter-list .row .level{
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
 }
+
+.meter{
+  position: relative;
+  height: 10px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.meter .bar{
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: calc(var(--val, 0) * 1%);
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-3) 100%);
+  border-right: 1px solid rgba(0,0,0,0.05);
+  border-radius: 999px;
+  transition: width .6s ease;
+}
+
+/* Strengths / Interests */
+.pill-grid.squares{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 28px;
+}
+
+.pill-grid.squares li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  color: var(--accent-2);
+  font-weight: 600;
+}
+
+/* Carousel */
+.css-carousel{
+  position: relative;
+  border-radius: 14px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.css-carousel > input{ position:absolute; opacity:0; pointer-events:none; }
+
+.css-carousel .track{
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;                /* 画面高宽比，可改：56%≈16:9 */
+  background: #f0f2f8;
+}
+
+.css-carousel .slide{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .6s ease;
+  display: grid;
+  place-items: center;
+  background: #8f96a3;            /* 加载前的灰底 */
+}
+
+.css-carousel .slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 根据选中状态显示对应 slide */
+#paint1:checked ~ .track .s1{ opacity: 1; }
+#paint2:checked ~ .track .s2{ opacity: 1; }
+#paint3:checked ~ .track .s3{ opacity: 1; }
+
+/* 箭头 */
+.css-carousel .nav-arrows{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  pointer-events: none;
+}
+
+.css-carousel .nav-arrows label{
+  align-self: center;
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  color: #fff; font-size: 20px; line-height: 1;
+  background: rgba(0,0,0,.28);
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: auto;
+  user-select: none;
+  transition: background .25s ease;
+}
+.css-carousel .nav-arrows label:hover{ background: rgba(0,0,0,.55); }
+.css-carousel .nav-arrows .prev{ justify-self: start; margin-left: 12px; }
+.css-carousel .nav-arrows .next{ justify-self: end;   margin-right: 12px; }
+
+/* 只显示当前状态对应的那一对箭头 */
+.css-carousel .nav-arrows label{ display:none; }
+#paint1:checked ~ .nav-arrows label[for="paint3"].prev,
+#paint1:checked ~ .nav-arrows label[for="paint2"].next{ display:grid; }
+#paint2:checked ~ .nav-arrows label[for="paint1"].prev,
+#paint2:checked ~ .nav-arrows label[for="paint3"].next{ display:grid; }
+#paint3:checked ~ .nav-arrows label[for="paint2"].prev,
+#paint3:checked ~ .nav-arrows label[for="paint1"].next{ display:grid; }
+
+/* 底部小点 */
+.css-carousel .dots{
+  position: absolute;
+  bottom: 12px; left: 0; right: 0;
+  text-align: center;
+}
+.css-carousel .dot{
+  display: inline-block;
+  width: 36px; height: 3px;      /* 细长条风格 */
+  margin: 0 4px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.45);
+  cursor: pointer;
+}
+#paint1:checked ~ .dots label[for="paint1"],
+#paint2:checked ~ .dots label[for="paint2"],
+#paint3:checked ~ .dots label[for="paint3"]{
+  background: #fff;
+}
+
+
 
 /* Contact */
 .contact-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:24px; align-items:start; }
