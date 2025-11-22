@@ -168,6 +168,26 @@ h1, h2, h3{ color:var(--accent-2); }
   margin-bottom: 6px;
 }
 
+/* logo */
+.exp-header{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.exp-logo{
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #f3f5fa; 
+  padding: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1px solid var(--border);
+}
+
+
 /* Skills + Artwork Carousel */
 .skills-grid{ display:grid; grid-template-columns:1fr 1fr; gap:26px; align-items:start; }
 .skill-columns{ columns:2; gap:18px; list-style:disc; padding-left:18px; }
@@ -255,7 +275,7 @@ h1, h2, h3{ color:var(--accent-2); }
   position: relative;
   width: 100%;
   height: 0;
-  padding-top: 100%;                /* 画面高宽比，可改：56%≈16:9 */
+  padding-top: 100%; 
   background: #f0f2f8;
 }
 
@@ -266,7 +286,7 @@ h1, h2, h3{ color:var(--accent-2); }
   transition: opacity .6s ease;
   display: grid;
   place-items: center;
-  background: #8f96a3;            /* 加载前的灰底 */
+  background: #8f96a3;           
 }
 
 .css-carousel .slide img{
@@ -275,12 +295,16 @@ h1, h2, h3{ color:var(--accent-2); }
   object-fit: cover;
 }
 
-/* 根据选中状态显示对应 slide */
 #paint1:checked ~ .track .s1{ opacity: 1; }
 #paint2:checked ~ .track .s2{ opacity: 1; }
 #paint3:checked ~ .track .s3{ opacity: 1; }
+#paint4:checked ~ .track .s4{ opacity: 1; }
+#paint5:checked ~ .track .s5{ opacity: 1; }
+#paint6:checked ~ .track .s6{ opacity: 1; }
+#paint7:checked ~ .track .s7{ opacity: 1; }
+#paint8:checked ~ .track .s8{ opacity: 1; }
 
-/* 箭头 */
+/* arrows */
 .css-carousel .nav-arrows{
   position: absolute;
   inset: 0;
@@ -305,16 +329,25 @@ h1, h2, h3{ color:var(--accent-2); }
 .css-carousel .nav-arrows .prev{ justify-self: start; margin-left: 12px; }
 .css-carousel .nav-arrows .next{ justify-self: end;   margin-right: 12px; }
 
-/* 只显示当前状态对应的那一对箭头 */
 .css-carousel .nav-arrows label{ display:none; }
-#paint1:checked ~ .nav-arrows label[for="paint3"].prev,
+#paint1:checked ~ .nav-arrows label[for="paint8"].prev,
 #paint1:checked ~ .nav-arrows label[for="paint2"].next{ display:grid; }
 #paint2:checked ~ .nav-arrows label[for="paint1"].prev,
 #paint2:checked ~ .nav-arrows label[for="paint3"].next{ display:grid; }
 #paint3:checked ~ .nav-arrows label[for="paint2"].prev,
-#paint3:checked ~ .nav-arrows label[for="paint1"].next{ display:grid; }
+#paint3:checked ~ .nav-arrows label[for="paint4"].next{ display:grid; }
+#paint4:checked ~ .nav-arrows label[for="paint3"].prev,
+#paint4:checked ~ .nav-arrows label[for="paint5"].next{ display:grid; }
+#paint5:checked ~ .nav-arrows label[for="paint4"].prev,
+#paint5:checked ~ .nav-arrows label[for="paint6"].next{ display:grid; }
+#paint6:checked ~ .nav-arrows label[for="paint5"].prev,
+#paint6:checked ~ .nav-arrows label[for="paint7"].next{ display:grid; }
+#paint7:checked ~ .nav-arrows label[for="paint6"].prev,
+#paint7:checked ~ .nav-arrows label[for="paint8"].next{ display:grid; }
+#paint8:checked ~ .nav-arrows label[for="paint7"].prev,
+#paint8:checked ~ .nav-arrows label[for="paint1"].next{ display:grid; }
 
-/* 底部小点 */
+/* dots */
 .css-carousel .dots{
   position: absolute;
   bottom: 12px; left: 0; right: 0;
@@ -322,7 +355,7 @@ h1, h2, h3{ color:var(--accent-2); }
 }
 .css-carousel .dot{
   display: inline-block;
-  width: 36px; height: 3px;      /* 细长条风格 */
+  width: 36px; height: 3px; 
   margin: 0 4px;
   border-radius: 999px;
   background: rgba(255,255,255,.45);
@@ -330,23 +363,43 @@ h1, h2, h3{ color:var(--accent-2); }
 }
 #paint1:checked ~ .dots label[for="paint1"],
 #paint2:checked ~ .dots label[for="paint2"],
-#paint3:checked ~ .dots label[for="paint3"]{
+#paint3:checked ~ .dots label[for="paint3"],
+#paint4:checked ~ .dots label[for="paint4"],
+#paint5:checked ~ .dots label[for="paint5"],
+#paint6:checked ~ .dots label[for="paint6"],
+#paint7:checked ~ .dots label[for="paint7"],
+#paint8:checked ~ .dots label[for="paint8"]{
   background: #fff;
 }
 
 
 
 /* Contact */
-.contact-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:24px; align-items:start; }
-.contact-form{ display:grid; gap:12px; }
-.contact-form label{ display:grid; gap:6px; }
-.contact-form input, .contact-form textarea{
-  background:#fff; color:var(--text); border:1px solid var(--border); border-radius:12px; padding:10px 12px;
+.contact-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:24px;
 }
-.contact-form input:focus, .contact-form textarea:focus{
-  outline:2px solid var(--accent-3); outline-offset:2px;
+
+/* Contact info only layout */
+.contact-info-only{
+  margin-top: 20px;
+  background: var(--panel); 
+  padding: 20px 28px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  max-width: 500px;
 }
-.contact-list{ list-style:none; padding:0; margin:0; display:grid; gap:10px; }
+
+.contact-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:14px;
+}
+
 
 /* Footer */
 .site-footer{ border-top:1px solid var(--border); padding:26px 0; color:var(--muted); background:#fff; }
