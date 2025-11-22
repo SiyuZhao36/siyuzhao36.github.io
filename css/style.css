@@ -1,13 +1,13 @@
 :root{
-  --bg: #f3f5fa;         /* page background (very light blue-gray) */
-  --panel: #ffffff;      /* card/panel surface */
-  --panel-2:#eef1f7;     /* subtle section background */
-  --text:#1a1a1a;        /* primary text */
-  --muted:#5f6b85;       /* secondary text */
-  --accent:#4e47c2;      /* primary accent (violet/indigo) */
-  --accent-2:#1c154a;    /* deep navy for emphasis */
-  --accent-3:#6f63ff;    /* bright purple for buttons/links */
-  --border:#e3e7f0;      /* light border */
+  --bg: #f3f5fa;         
+  --panel: #ffffff;      
+  --panel-2:#eef1f7;     
+  --text:#1a1a1a; 
+  --muted:#5f6b85;  
+  --accent:#4e47c2; 
+  --accent-2:#1c154a; 
+  --accent-3:#6f63ff; 
+  --border:#e3e7f0; 
   --shadow: 0 6px 24px rgba(28,21,74,0.10);
 }
 
@@ -371,7 +371,6 @@ h1, h2, h3{ color:var(--accent-2); }
 #paint8:checked ~ .dots label[for="paint8"]{
   background: #fff;
 }
-
 
 
 /* Contact */
